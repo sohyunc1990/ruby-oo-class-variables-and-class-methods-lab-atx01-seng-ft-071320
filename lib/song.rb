@@ -23,7 +23,7 @@ class Song
     @@genres.uniq!
   end
   def self.genre_count
-    genrecounts = {}
+    genrecounts = Hash.new(0)
     @@genres.each do |genre|
       genrecounts[genre] += 1
     end
